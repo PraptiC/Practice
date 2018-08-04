@@ -24,7 +24,7 @@ public class FastestFileCopy {
 		}System.out.println("Time: "+(System.currentTimeMillis()-startTime));
 		try {
 			inChannel.close();
-			if(outChannel != null) 
+			if(outChannel == null) 
 				outChannel.close();
 		} catch (Exception e) {
 			e.printStackTrace();
