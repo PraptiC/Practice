@@ -8,26 +8,27 @@ public class FastestFileCopy {
 		FileChannel inChannel=null;
 		FileChannel outChannel=null;
 		long startTime=System.currentTimeMillis();
-		long position = 0;
-		long count = inChannel.size();
 		try {
 			
 			inChannel=new FileInputStream("D:/Demo/vsc.exe").getChannel();
 			outChannel = new FileOutputStream("D:/Demo/vsc2.exe").getChannel();
-			outChannel.transferFrom(inChannel, position, count);
-			/*
-			 * The parameters position and count tell 
-			 * where in the destination file to start writing (position), 
-			 * and how many bytes to transfer maximally (count).
-			 * 
+			outChannel.transferFrom(inChannel, 0, inChannel.size());
+			/*The parameters position and count tell 
+			where in the destination file to start writing (position), 
+			and how many bytes to transfer maximally (count).
 			 */
 						
 		} catch(Exception e) {
 			e.getMessage();
 			
 		}System.out.println("Time: "+(System.currentTimeMillis()-startTime));
-		inChannel.close();
-		outChannel.close();
+		try {
+			inChannel.close();
+			if(outChannel != null) 
+				outChannel.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }
