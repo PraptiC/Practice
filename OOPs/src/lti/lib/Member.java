@@ -1,27 +1,35 @@
 package lti.lib;
 
-public class Member implements BookMemberDetails{
+public class Member {
 
-	public String mName;
-	public boolean hasIssued = false;
-	@Override
-	public String getBooks() {
-		if(hasIssued == false)
-		return null;
+	private String name;
+	private Book book;
+	
+	public Member() {
+	}
+
+	public Member(String name) {
+		this.name = name;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public Book getBook() {
+		return book;
+	}
+
+	public void setBook(Book book) {
+		this.book = book;
+	}
+	
+	public void issuedBook() {
+		if(book!=null)
+			System.out.println(name+" issued "+book.getTitle());
 		else
-			return 
+			System.out.println(name+" has not issued any book");
 	}
 
-	@Override
-	public void issueBook() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void returnBook() {
-		// TODO Auto-generated method stub
-		
-	}
-
+	
 }
