@@ -5,7 +5,7 @@ import java.io.FileOutputStream;
 
 public class FastFileCopyDemo {
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String ... args) throws Exception {
 		BufferedInputStream instream = new BufferedInputStream(new FileInputStream("D:/Demo/vsc.exe"));
 		BufferedOutputStream outstream = new BufferedOutputStream(new FileOutputStream("D:/Demo/vsc2.exe"));
 		long startTime=System.currentTimeMillis();
