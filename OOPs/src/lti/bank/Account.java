@@ -1,5 +1,7 @@
 package lti.bank;
 
+import java.util.Vector;
+
 /**
  * 
  * @author Prapti & Shilpa
@@ -11,9 +13,9 @@ public abstract class Account implements Bank {
 	private String holder;
 	protected double balance;
 
-	protected Transactions[] tr;
+	//protected Transactions[] vtr;
 	protected int idx;
-
+	Vector<Transactions> vtr = new Vector<Transactions>();
 	private static int autogen = INITIAL_ACCOUNT_NUMBER;
 
 	public Account() {
@@ -25,7 +27,8 @@ public abstract class Account implements Bank {
 		this.holder = holder;
 		this.balance = balance;
 
-		tr = new Transactions[10]; // Instantiating Transaction array for the account
+		//tr = new Transactions[10]; // Instantiating Transaction array for the account
+		//Vector<Transactions> vtr = new Vector<Transactions>();
 	}
 
 	public void summary() {
@@ -40,13 +43,15 @@ public abstract class Account implements Bank {
 
 	public void deposit(double amount) {
 		balance += amount;
-		tr[idx++] = new Transactions("Cr", amount, balance);
+		vtr.add(new Transactions("Cr", amount, balance));
 	}
 
 	public void statement() {
 		System.out.println("Statement of Acc. " + accNo);
-		for (int i = 0; i < idx; i++)
-			System.out.println(tr[i]);
+	//	for (int i = 0; i < idx; i++)
+			for(Transactions t:vtr)
+				System.out.println(t);
+			//System.out.println(tr[i]);
 		System.out.println("\n\n\n");
 	}
 

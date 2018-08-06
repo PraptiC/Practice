@@ -8,14 +8,15 @@ public class Saving extends Account {
 	public Saving(String holder) {
 		super(holder, MINIMUM_SAVING_BALANCE);
 		
-		tr[idx++] = new Transactions("OB", balance, balance); // Adding opening account transaction
+		//tr[idx++] = new Transactions("OB", balance, balance); // Adding opening account transaction
+		vtr.addElement(new Transactions("OB", balance, balance));
 	}
 
 	@Override
 	public void withdraw(double amount) throws BalanceException {
 		if (amount <= (balance - MINIMUM_SAVING_BALANCE)) {
 			balance -= amount;
-			tr[idx++] = new Transactions("Dr", amount, balance);
+			vtr.add( new Transactions("Dr", amount, balance));
 		} else
 			throw new BalanceException("Insufficient Balance");
 	}
