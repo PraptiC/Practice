@@ -10,7 +10,7 @@
 <form>
 <h2>Welcome to Hola! Please enter these details to create your account</h2><hr>
 <h4>Name</h4><input type="text" name=name placeholder="Enter name:"></input>
-<h4>Email </h4><input type="text" name=email placeholder="Enter email id"></input>
+<h4>Email </h4><input type="email" name=email placeholder="Enter email id"></input>
 <h4>Password </h4><input type="password" name=password placeholder="Set a password"></input>
 <h4>Age</h4><input type="number" name=age placeholder="Enter age"></input>
 <h4>Gender</h4><select name="gender">

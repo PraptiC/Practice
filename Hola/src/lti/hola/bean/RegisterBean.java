@@ -6,7 +6,7 @@ public class RegisterBean {
 	private String name;
 	private String password;
 	private int age;
-	private char gender;
+	private String gender;
 	private String city;
 	private String movie;
 	private String photo;
@@ -46,18 +46,16 @@ public class RegisterBean {
 		this.age = age;
 	}
 
-	public char getGender() {
+	public String getGender() {
 		return gender;
 	}
-
-	public void setGender(char gender) {
+	public void setGender(String gender) {
 		this.gender = gender;
 	}
 
 	public String getCity() {
 		return city;
 	}
-
 	public void setCity(String city) {
 		this.city = city;
 	}
@@ -65,7 +63,6 @@ public class RegisterBean {
 	public String getMovie() {
 		return movie;
 	}
-
 	public void setMovie(String movie) {
 		this.movie = movie;
 	}
@@ -73,7 +70,6 @@ public class RegisterBean {
 	public String getPhoto() {
 		return photo;
 	}
-
 	public void setPhoto(String photo) {
 		this.photo = photo;
 	}
