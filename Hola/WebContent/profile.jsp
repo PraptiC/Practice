@@ -8,8 +8,17 @@
 </head>
 <body>
 <jsp:include page="banner.jsp"/>
-<h1>WELCOME TO HOLA</h1>
-
+<table width="400" align="center">
+<tr><th colspan="2"><h3>Hola! These are your profile details:</h3></th></tr>
+<tr><td><h4>Email: </td><td></td></tr>
+<tr><td><h4>Password: </h4></td><td></td></tr>
+<tr><td><h4>Name: </h4></td><td></td></tr>
+<tr><td><h4>Age: </h4></td><td></td></tr>
+<tr><td><h4>Gender: </h4></td><td></td></tr>
+<tr><td><h4>City: </h4></td><td></td><tr>
+<tr><td><h4>Your favourite movie is: </h4></td><td></td></tr>
+<%--<h4>Photo: </h4> --%>
+</table>
 <%@ include file="footer.html" %>
 
 </body>

@@ -162,4 +162,13 @@ public class UserRepositoryImpl implements UserRepository {
 
 	}
 
+	@Override
+	public RegisterBean display(RegisterBean register) {
+		
+		String sql = "select * from users where email=? and password=?";
+		Connection conn = null;
+		RegisterBean user = null;
+		return null;
+	}
+
 }

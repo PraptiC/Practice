@@ -47,13 +47,15 @@ public class UserController extends HttpServlet {
 		else
 			response.sendRedirect("forgotPage.jsp");
 //			System.out.println("Got requset for forget passwrd");
-		} else {
+		} else if(referer.contains("change.jsp")) {
 			// Request coming for updating password
 			if(LoginController.changePassword(request))
 				response.sendRedirect("login.jsp");
 			else
 				response.sendRedirect("change.jsp");
 		}
+		else
+			
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)

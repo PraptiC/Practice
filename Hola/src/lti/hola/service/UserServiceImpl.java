@@ -57,4 +57,9 @@ public class UserServiceImpl implements UserService {
 		return repo.persist(register);
 	}
 
+	@Override
+	public RegisterBean display(RegisterBean register) {
+		return repo.display(register);
+	}
+
 }
