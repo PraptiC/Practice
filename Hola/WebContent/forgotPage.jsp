@@ -7,6 +7,7 @@
 <title>Forgot Password</title>
 </head>
 <body bgcolor=burlywood text=maroon>
+<form action="User.hola">
 <h2>Seems like you forgot your password; Please enter these details to access your account again</h2><hr>
 <h4>Email </h4>
 <input type="text" name=email placeholder="Enter email id"></input>
@@ -15,6 +16,6 @@
 
 <%--if() **somelogic, go to homepage --%>
 <input type = submit value=Submit>
-
+</form>
 </body>
 </html>
