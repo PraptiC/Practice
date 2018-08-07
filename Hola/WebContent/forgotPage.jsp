@@ -8,14 +8,14 @@
 </head>
 <body bgcolor=burlywood text=maroon>
 <form action="User.hola">
-<h2>Seems like you forgot your password; Please enter these details to access your account again</h2><hr>
+<h2>Seems like you forgot your password Please enter these details to access your account again</h2><hr>
 <h4>Email </h4>
 <input type="text" name=email placeholder="Enter email id"></input>
 <h4>What is the name of your favourite movie?</h4>
-<input type="password" name=answerMovie placeholder="Enter your answer"></input><br><br>
+<input type="password" name=movie placeholder="Enter your answer"></input><br><br>
 
 <%--if() **somelogic, go to homepage --%>
-<input type = submit value=Submit>
+<input type=submit value=Submit>
 </form>
 </body>
 </html>

@@ -30,7 +30,6 @@
 <tr><td>Favourite Movie</td><td><input name="movie" required></td></tr>
 <tr><td>Photo</td><td><input type="file" name="photo"></td></tr>
 <tr><th colspan="2"><input type="submit" value="Register"></th></tr>
-
 </table>
 <%@ include file="footer.html" %>
 <%--

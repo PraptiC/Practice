@@ -1,14 +1,11 @@
-package lti.hola.repo;
+package lti.hola.service;
 
 import lti.hola.bean.ForgetBean;
 import lti.hola.bean.LoginBean;
 import lti.hola.bean.RegisterBean;
-/**
- * Repository interface for variety of database
- * @author Prapti, Shilpa
- * @version 1.0
- */
-public interface UserRepository {
+
+public interface UserService {
+
 	RegisterBean authenticate(LoginBean login);
 	
 	boolean validate(ForgetBean forget);
