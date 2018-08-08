@@ -25,17 +25,26 @@ public class ResultSetDemo {
 		          // NAME column of row 5 to be AINSWORTH
 		       rs.updateRow(); // updates the row in the data source
 		       
+		       for(int c=1;c<=meta.getColumnCount();c++)
+					System.out.print(meta.getColumnName(c)+"\t");
+				System.out.println();
+				rs.absolute(1);
 		       while (rs.next())
 					System.out.printf("%5d\t%-15s\n",rs.getInt(1),rs.getString("dname"));
-		       
-		       rs.moveToInsertRow(); // moves cursor to the insert row
-		       rs.updateInt(1, 50); // updates the
-		          // first column of the insert row to be AINSWORTH
+		         
+		   /*  rs.moveToInsertRow(); // moves cursor to the insert row
+		       rs.updateInt(1, 80); // updates the
+		    // first column of the insert row to be AINSWORTH		      
 		       rs.updateString(2,"DEVELOPMENT"); // updates the second column to be 35
 		       rs.insertRow();
-		       rs.moveToCurrentRow();
-		       
-		       
+		       //rs.moveToCurrentRow();
+		       rs.absolute(1);
+		       for(int c=1;c<=meta.getColumnCount();c++)
+					System.out.print(meta.getColumnName(c)+"\t");
+				System.out.println();
+		      while (rs.next())
+					System.out.printf("%5d\t%-15s\n",rs.getInt(1),rs.getString("dname"));*/
+		      
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
