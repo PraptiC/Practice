@@ -11,7 +11,9 @@
 <form action="User.hola">
 <fieldset>
     <legend>Log in to your Hola account</legend>
-<h4>Email </h4>
+<h4> Email </h4>
+<% if(request.getParameter("invalid")!=null) { %>
+<font size="3" color="red">Invalid Email Id/Password</font> <% } %>
 <input type="text" name=email placeholder="Enter email id"></input>
 <h4>Password </h4>
 <input type="password" name=password placeholder="Enter your password"></input><br><br>

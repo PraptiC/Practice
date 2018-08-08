@@ -17,5 +17,5 @@ public interface UserRepository {
 	
 	boolean  persist(RegisterBean register);
 	
-	RegisterBean display(RegisterBean register);
+	RegisterBean displayDetails(LoginBean login);
 }

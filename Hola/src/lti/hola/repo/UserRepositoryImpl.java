@@ -163,12 +163,44 @@ public class UserRepositoryImpl implements UserRepository {
 	}
 
 	@Override
-	public RegisterBean display(RegisterBean register) {
+	public RegisterBean displayDetails(LoginBean login) {
 		
 		String sql = "select * from users where email=? and password=?";
 		Connection conn = null;
 		RegisterBean user = null;
-		return null;
+		//return null;
+		
+		try {
+			conn = getConnection();
+			PreparedStatement stmt = conn.prepareStatement(sql);
+			stmt.setString(1, login.getEmail());
+			stmt.setString(2, login.getPassword());
+			ResultSet rs = stmt.executeQuery();
+			if (rs.next()) {
+				user = new RegisterBean();
+				user.setName(rs.getString(2));
+				user.setEmail(rs.getString(1));
+				user.setPassword(rs.getString(3));
+				user.setAge(rs.getInt(4));
+				user.setGender(rs.getString(5));
+				user.setCity(rs.getString(6));
+				user.setMovie(rs.getString(7));
+				user.setPhoto(rs.getString(8));
+			}
+			return user;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return null;
+		} finally {
+			try {
+				if (conn != null)
+					conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+
+		
 	}
 
 }

@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Change Password</title>
 </head>
-<body>
+<body bgcolor=burlywood text=maroon>
 <jsp:include page="banner.jsp"/>
 <form action="User.hola">
 <fieldset>

@@ -10,6 +10,8 @@
 <form action="User.hola">
 <h2>Seems like you forgot your password Please enter these details to access your account again</h2><hr>
 <h4>Email </h4>
+<% if(request.getParameter("invalid")!=null) { %>
+<font size="3" color="red">Invalid Email Id/Answer</font> <% } %>
 <input type="text" name=email placeholder="Enter email id"></input>
 <h4>What is the name of your favourite movie?</h4>
 <input type="password" name=movie placeholder="Enter your answer"></input><br><br>

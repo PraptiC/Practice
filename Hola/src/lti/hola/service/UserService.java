@@ -14,5 +14,5 @@ public interface UserService {
 	
 	boolean  persist(RegisterBean register);
 	
-	RegisterBean display(RegisterBean register);
+	RegisterBean displayDetails(LoginBean login);
 }

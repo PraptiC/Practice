@@ -58,8 +58,8 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public RegisterBean display(RegisterBean register) {
-		return repo.display(register);
+	public RegisterBean displayDetails(LoginBean login) {
+		return repo.displayDetails(login);
 	}
 
 }

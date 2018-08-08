@@ -45,4 +45,19 @@ public class LoginController {
 		return service.changePassword(change);
 	}
 
+	/*public static RegisterBean displayDetails(HttpServletRequest request) {
+		UserService service = new UserServiceImpl();
+		
+		// Instantiating login Bean to hold login credentials
+		LoginBean login = new LoginBean();
+
+		// Reading request parameters and Storing in Login Bean object
+		login.setEmail(request.getParameter("email"));
+		login.setPassword(request.getParameter("password"));
+
+		// Passing login bean Object to service method
+		RegisterBean user = service.displayDetails(login);
+		return user;
+		}*/
+
 }
