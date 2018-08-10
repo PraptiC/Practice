@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+	<class name="AccountBean" table="accounts_1">
+		<id name="accNo">
+			<generator class="assigned"/>	
+		</id>
+		
+		<set name="transactions" cascade="save-update,delete" inverse="true">
+			<key column="accNo" on-delete="cascade"/>
+			<one-to-many class="TransactionBean"/>	
+		</set>
+	
+		<property name="holder" type="string"></property>
+		<property name="balance" type="string"></property>
+	</class>
+	
+	<class name="TransactionBean" table="transactions_1">
+		<id name="trans_id">
+			<generator class="assigned"/>
+		</id>
+		
+		<many-to-one name="account" column="accNo" not-null="true"/>
+		<property name="type" type="string" />
+  		<property name="amount" />
+  		<property name="balance" />
+  		
+	</class>
+
+</hibernate-mapping>        
