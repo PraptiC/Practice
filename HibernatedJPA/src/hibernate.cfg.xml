@@ -30,17 +30,18 @@
 
         <!-- Drop and re-create the database schema on startup -->
         <property name="hbm2ddl.auto">update</property>
-		 <mapping class="lti.pojo.Customer" />
+		 <!--<mapping class="lti.pojo.Customer" />
 	
-	<!--<mapping class="lti.pojo.tablepersubclass.BankAccount" />
+	<mapping class="lti.pojo.tablepersubclass.BankAccount" />
 		<mapping class="lti.pojo.tablepersubclass.BillingDetails" />
 		<mapping class="lti.pojo.tablepersubclass.CreditCard" />
 		 
 		 <mapping class="lti.pojo.tableperhierarchy.BankAccount"/>
 		 <mapping class="lti.pojo.tableperhierarchy.BillingDetails"/>
-		 <mapping class="lti.pojo.tableperhierarchy.CreditCard"/> -->
+		 <mapping class="lti.pojo.tableperhierarchy.CreditCard"/> 
 		 <mapping class="lti.pojo.Order"/>
 		 <mapping class="lti.pojo.one2many.Employee"/>
-		 <mapping class="lti.pojo.one2many.Department"/>
+		 <mapping class="lti.pojo.one2many.Department"/>-->
+		 <mapping class="casestudy.pojo.User"/>
     </session-factory>
 </hibernate-configuration>
