@@ -33,11 +33,14 @@
 		<!-- <mapping resource="mappings/customer.hbm.xml" />
 		<mapping resource="mappings/book.hbm.xml" />
 		<mapping resource="mappings/person.hbm.xml" /> -->
+		
+		<mapping resource = "mappings/Transaction.hbm.xml"/>
+		
 		<!-- <mapping resource="lti/pojo/tableperhierarchy/BillingDetails.hbm.xml"/>
 		<mapping resource="lti/pojo/tableperconcreteclass/BillingDetails.hbm.xml"/>
 		<mapping resource="lti/pojo/tablepersubclass/BillingDetails.hbm.xml"/>
 		<mapping resource="lti/pojo/tablepersubclass/discriminator/BillingDetails.hbm.xml"/> 
-		<mapping resource="lti/pojo/one2one/User.hbm.xml"/>-->
-		<mapping resource="lti/pojo/one2many/Employee.hbm.xml" />
+		<mapping resource="lti/pojo/one2one/User.hbm.xml"/>
+		<mapping resource="lti/pojo/one2many/Employee.hbm.xml" />-->
     </session-factory>
 </hibernate-configuration>
