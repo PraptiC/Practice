@@ -4,18 +4,27 @@ import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table
-public class Comment {
+@Table(name="Comments")
+public class Comment{
 
 	@Id
 	private int commentId;
+	
+	@ManyToOne
+	@JoinColumn(name="feedId")
 	private int feedId;
+	
+	@ManyToOne
+	@JoinColumn(name="userId")
 	private String userId;
-	private String comment;
+	private String commentContent;
 	private Date commentTimestamp;
+	
 	public int getCommentId() {
 		return commentId;
 	}
@@ -35,10 +44,10 @@ public class Comment {
 		this.userId = userId;
 	}
 	public String getComment() {
-		return comment;
+		return commentContent;
 	}
 	public void setComment(String comment) {
-		this.comment = comment;
+		this.commentContent = comment;
 	}
 	public Date getCommentTimestamp() {
 		return commentTimestamp;

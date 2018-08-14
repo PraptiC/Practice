@@ -1,10 +1,21 @@
 package casestudy.pojo;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
+import lti.pojo.one2many.Employee;
 
 @Entity
 @Table(name="users_forum")
@@ -16,6 +27,9 @@ public class User {
 	private String password;
 	private String email;
 	
+	@OneToMany(mappedBy="userId",cascade= {CascadeType.ALL}, fetch=FetchType.EAGER)
+	@OnDelete(action=OnDeleteAction.CASCADE)
+	private Set<Feed> feeds = new HashSet<Feed>();
 	
 	public String getUserid() {
 		return userid;

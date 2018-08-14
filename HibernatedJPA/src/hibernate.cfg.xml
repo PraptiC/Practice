@@ -43,5 +43,7 @@
 		 <mapping class="lti.pojo.one2many.Employee"/>
 		 <mapping class="lti.pojo.one2many.Department"/>-->
 		 <mapping class="casestudy.pojo.User"/>
+		 <mapping class="casestudy.pojo.Feed"/>
+		 <mapping class="casestudy.pojo.Comment"/>
     </session-factory>
 </hibernate-configuration>
